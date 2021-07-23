@@ -18,7 +18,6 @@ from decouple import config
 from jose.utils import base64url_decode
 
 
-
 region = config('COGNITO_REGION_NAME')
 userpool_id = config('USER_POOL_ID')
 app_client_id = config('CLIENT_ID')
@@ -81,4 +80,4 @@ def lambda_handler(token, context):
 if __name__ == '__main__':
     # for testing locally you can enter the JWT ID Token here
     event = {'id_token': ''}
-    lambda_handler(event, None))
+    lambda_handler(event, None)
