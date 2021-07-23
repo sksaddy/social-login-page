@@ -1,0 +1,136 @@
+/* navbar regular css start */
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.site-navbar ul li a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-navbar ul li a:hover {
+  font-size: 19px;
+  color: #e33e3e;
+  transform: scale(1.07);
+  transition: transform 0.25s ease-in-out;
+  background: rgba(255, 255, 255, 0.1);
+}
+header.sticky {
+  background: #1d2529fc;
+  box-shadow: 0px 0px 8px 1px #0000004b;
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.28);
+  transition: 0.5s ease;
+}
+/* navbar regular css end */
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 3px solid transparent;
+  margin-right: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 27px;
+  display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+.nav-toggler span:before {
+  content: "";
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: "";
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+/* nav-toggler css start */
+
+/* mobile breakpoint start */
+@media screen and (max-width: 801px) {
+  .navContainer {
+    max-width: 720px;
+    margin: auto !important;
+  }
+  /* navbar css for mobile start */
+  .nav-toggler {
+    display: block;
+  }
+  .site-navbar {
+    min-height: 60px;
+  }
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 76px;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #444;
+    background-color: rgba(0, 0, 0, 0.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0px !important;
+  }
+  .site-navbar ul li a {
+    padding: 25px;
+  }
+  .site-navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.048);
+    color: white;
+  }
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+    padding-top: 0.2rem;
+  }
+  /* navbar css for mobile end */
+}
+
+@media (max-width: 1024px) and (min-width: 801px) {
+  .navContainer {
+    padding: unset !important;
+  }
+  .site-navbar ul li a {
+    padding: unset !important;
+  }
+  .header-area {
+    height: 4.5rem;
+    padding-top: 0.5rem;
+  }
+}
+/* mobile breakpoint end */
+

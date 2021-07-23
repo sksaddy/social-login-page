@@ -1,0 +1,277 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'navbar-style.css' %}" />
+    <!-- Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Sk Saddam - Full Stack Web Developer</title>
+  </head>
+  <body style="background: #1D2529;">
+
+    <!-- header / navbar -->
+    <header class="header-area fixed-top">
+      <!-- site-navbar start -->  
+      <div class="navbar-area pt-2" id="navbar">
+        <div class="navContainer mx-5 px-4 py-1">
+          <nav class="site-navbar">
+            <!-- site logo -->
+            <a href="/" class="navbar-brand text-white fs-4" style="font-weight: 600;">Sk Saddam</a>
+            <!-- site menu/nav -->
+            <ul class="border-0">
+              <li><a href="#about">About</a></li>
+              <li class="ms-3"><a href="#work">Projects</a></li>
+              <li class="ms-3"><a href="mailto:saddam@sksaddam.com" id="emailMe">Contact</a></li>
+              <li class="ms-4"><a class="border-bottom pb-2 px-0" href="#">Sign in/up</a></li>
+            </ul>
+    
+            <!-- nav-toggler for mobile version only -->
+            <button class="nav-toggler">
+              <span></span>
+            </button>
+          </nav>
+        </div>
+      </div><!-- navbar-area end -->
+    </header>
+
+    <!-- The container containing all the main contents  -->
+    <div class="container-fluid box1 mt-5 pt-5" id="about">
+      <!-- my profile picture -->
+      <img
+        src="{% static 'assets/saddam.png' %}"
+        style="width: 11rem;"
+        class="rounded mx-auto d-block"
+        id="profilepic"
+        alt="Sk Saddam Hossain"
+      />
+
+      <!-- introduction section - my bio -->
+      <div class="container box1-0 mb-4">
+        <!-- title and some main info to highlight -->
+        <div class="text-center py-4 w-23 p-3" id="name">
+          <span id="typed"></span>
+        </div>
+        <!-- know more about me -->
+        <div class="mx-auto mb-5 d-block text-center" id="bio">
+        	I'm Sk Saddam Hossain. 
+        	I design, code, and build websites.
+        	Helping businesses & startups grow online.<br>
+        	Tech stacks I mostly work on: <code class="text-white">Html, CSS/ SCSS, Javascript, Bootstrap, Python/ Django, Mysql/ PostgreSQL</code>
+        	<br><code class="text-white">Beginner: React Native, React JS, Node JS</code>
+        </div>
+        <hr id="work">
+      </div>
+    </div>
+  
+    <!-- PROJECTS -->
+    <div class="container box1-1 mt-3">
+
+      <!-- PROJECT 1 -->
+      <div class="row projects d-flex justify-content-center" id="project2">
+        <!-- Project Description -->
+        <div class="col-md-5 details"data-aos="fade-down"  data-aos-duration="1500">
+        <div class="card mx-auto title" >
+          <div class="card-body mx-auto p-0 text-end">
+            <p class="card-text">
+              <div class="projectTitle"> ClickToVisit </div>
+              <span class="projectTech" style="font-size: 15px;">#Django &nbsp; #MongoDB &nbsp; #Javascript &nbsp; #Bootstrap</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card p-1 mx-auto description description-left" >
+          <div class="card-body text-end">
+            <p class="card-text">A hotel booking e-commerce platform. Features include: Payment gateway, Cart, Direct contact through WhatsApp. Map implementation using Mapbox API<code class="text-white mt-1"><br>[under development]</code> </p>
+            <a href="https://clicktovisit.herokuapp.com/" target="_blank" class="more text-decoration-none">&lt; Show me</a>
+          </div>
+        </div>
+        </div>
+        <!-- Project Thumbnail -->
+        <div class="col-md-5" data-aos="fade-up"  data-aos-duration="1500">
+          <!-- <span class="badge bg-danger">Featured</span> -->
+          <div class="card thumbnail mx-auto">
+            <video src="{% static 'assets/thumbnails/clicktovisit.mp4' %}" class="card-img-top" style="height: 18.5rem;" muted autoplay loop>
+            </video>
+          </div>
+          </div>
+      </div>
+      <hr>
+      <!-- PROJECT 2 -->
+      <div class="row projects d-flex justify-content-center" id="project1">
+          <!-- Project Thumbnail -->
+        <div class="col-md-5" data-aos="fade-up" data-aos-duration="1500">
+        <div class="card thumbnail mx-auto">
+          <video src="{% static 'assets/thumbnails/finansee.mp4' %}" class="card-img-top" style="height: 18.5rem;" muted autoplay loop>
+            </video>
+        </div>
+        </div>
+        <!-- Project Description -->
+        <div class="col-md-5 details" data-aos="fade-down"  data-aos-duration="1500">
+        <div class="card mx-auto title" >
+          <div class="card-body mx-1 p-0 text-start">
+            <p class="card-text">
+              <div class="projectTitle"> Finansee </div>
+              <span class="projectTech"> #Figma &nbsp; #HTML &nbsp; #Bootstrap &nbsp; #SCSS </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card p-1 mx-auto description description-right" >
+          <div class="card-body">
+            <p class="card-text">A financial consultancy platform. This is a template designed in figma and developed with bootstrap.<code class="text-white mt-1"><br>[under development: video conferencing, chat forum, etc...]</code></p>
+            <a href="https://finansee.co/" target="_blank" class="more text-decoration-none">Show me &gt;</a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <hr>
+      <!-- PROJECT 3 -->
+      <div class="row projects d-flex justify-content-center" id="project2">
+        <!-- Project Description -->
+        <div class="col-md-5 details"data-aos="fade-down"  data-aos-duration="1500">
+        <div class="card mx-auto title" >
+          <div class="card-body mx-2 p-0 text-end">
+            <p class="card-text">
+              <div class="projectTitle">Portfolio Website</div>
+              <span class="projectTech">#Bootstrap #Javascript #HTML #CSS</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card p-2 mx-auto description description-left" >
+          <div class="card-body text-end">
+            <p class="card-text">This is a Portfolio website. Aim of this portfolio website is to show Prachi's amazing writing/ thinking/ and communication skills <br>
+              <code class="text-white">Content writing projects, contact <a href="https://www.instagram.com/sole.visioner/" class="text-decoration-none">Prachi</a></code></p>
+            <a href="https://prachirathii.github.io/index.html" class="more text-decoration-none" target="_blank">&lt; Show me</a>
+          </div>
+        </div>
+        </div>
+        <!-- Project Thumbnail -->
+        <div class="col-md-5" data-aos="fade-up"  data-aos-duration="1500">
+          <div class="card thumbnail mx-auto">
+            <img src="{% static 'assets/thumbnails/toofani.png' %}" class="card-img-top" alt="thumbnail-2">
+          </div>
+          </div>
+      </div>
+      <hr>
+      <!-- PROJECT 4 -->
+      <div class="row projects d-flex justify-content-center" id="project1">
+          <!-- Project Thumbnail -->
+        <div class="col-md-5" data-aos="fade-up" data-aos-duration="1500">
+        <div class="card thumbnail mx-auto">
+          <img src="{% static 'assets/thumbnails/haveli.jpg' %}" class="card-img-top" alt="thumbnail-1">
+        </div>
+        </div>
+        <!-- Project Description -->
+        <div class="col-md-5 details" data-aos="fade-down"  data-aos-duration="1500">
+        <div class="card mx-auto title" >
+          <div class="card-body mx-1 text-start p-0">
+            <p class="card-text">
+              <div class="projectTitle"> Haveli Realtors  </div>
+              <span class="projectTech">#Figma</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="card p-3 mx-auto description description-right" >
+          <div class="card-body">
+            <p class="card-text">A brochure template for a fictional real estate company. For now it is a design that is supposed to be implemented using React JS</p>
+            <a href="https://bit.ly/3tzBrvx" class="more text-decoration-none" target="_blank">Show me &gt;</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    <hr>
+
+      <br>  <!-- don't remove it, this is constant -->
+    </div>
+
+    <!-- Contact thorugh social media -->
+    <div>
+      <ul style="list-style-type: none" id="socialMedia">
+        <li class="profiles py-3 d-flex">
+          <a
+            href="https://twitter.com/sksaddyy/"
+            target="_blank"
+            id="twitter"
+            onmouseover="displayTwitterId()"
+          >
+            <img src="{% static 'assets/icons/twitter.png' %}" alt="twitter@sksaddy99" style="width: 2rem;"/>
+          </a>
+          <div class="typedId ms-2">
+            <span id="twitterTyped"></span>
+          </div>
+        </li>
+        <li class="profiles py-3 d-flex">
+          <a
+            href="https://www.linkedin.com/in/sksaddy99/"
+            target="_blank"
+            id="linkedin"
+            onmouseover="displayLinkedInId()"
+          >
+            <img src="{% static 'assets/icons/linkedin.png' %}" alt="linkedIn@sksaddy99" style="width: 2rem;"/>
+          </a>
+          <div class="typedId ms-2">
+            <span id="linkedinTyped"></span>
+          </div>
+        </li>
+        <li class="profiles py-3 d-flex">
+          <a
+            href="https://www.instagram.com/sksaddam.99/"
+            target="_blank"
+            id="instagram"
+            onmouseover="displayInstaId()"
+          >
+            <img src="{% static 'assets/icons/instagram.png' %}" alt="instagram@sksaddam.99" style="width: 2rem;"/>
+          </a>
+          <div class="typedId ms-2">
+            <span id="instaTyped"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid d-flex text-white justify-content-center align-items-center">
+      <span class="m-0">Sk Saddam Hossain &copy; 2021</span>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="{% static 'index.js' %}"></script>
+    <!-- Typed effect JS -->
+    <script src="{% static 'assets/typed/lib/typed.min.js' %}"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
