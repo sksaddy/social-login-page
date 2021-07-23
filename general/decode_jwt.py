@@ -82,3 +82,4 @@ if __name__ == '__main__':
     # for testing locally you can enter the JWT ID Token here
     event = {'id_token': ''}
     lambda_handler(event, None))
+
