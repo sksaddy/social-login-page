@@ -42,11 +42,11 @@
               <li><a href="#about">About</a></li>
               <li class="ms-3"><a href="#work">Projects</a></li>
               <li class="ms-3"><a href="mailto:saddam@sksaddam.com" id="emailMe">Contact</a></li>
-	      {% if status == 0 %}
-              <li class="ms-4"><a class="border-bottom pb-2 px-0" href="https://saddam.auth.us-east-2.amazoncognito.com/login?response_type=code&client_id=1uqk20brag0csu0rbabjsr807v&redirect_uri=https://sksaddam.com">Sign in/up</a></li>
-	      {% elif status == 1 %}
-	      <li class="ms-4"><a class="pb-2 px-0" href="https://saddam.auth.us-east-2.amazoncognito.com/logout?client_id=1uqk20brag0csu0rbabjsr807v&logout_uri=https://sksaddam.com/thank-you">Sign Out</a></li>
-	      {% endif %}
+              {% if status == 0 %}
+              <li class="ms-4"><a class="border-bottom pb-2 px-0" href="#">Sign in/up</a></li>
+              {% elif status == 1 %}
+              <li class="ms-4"><a class="pb-2 px-0" href="#">Sign Out</a></li>
+              {% endif %}
             </ul>
     
             <!-- nav-toggler for mobile version only -->
