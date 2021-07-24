@@ -10,10 +10,13 @@ import base64
 
 
 def home(request):
+    context = {}
     try:
-        code = request.GET['code']
+        code = request.GET.get('code')
         userData = getTokens(code)
-        response = render(request, 'index.html', {'name': userData['name']})
+        context['status'] = 1
+        context['name'] = userData['name']
+        response = render(request, 'index.html', context)
         response.set_cookie(
             'sessiontoken', userData['id_token'], max_age=60*60*24, httponly=True)
         return response
@@ -21,9 +24,11 @@ def home(request):
         token = getSession(request)
         if token is not None:
             userData = decode_jwt.lambda_handler(token, None)
-            return HttpResponse(userData)
+            context['status'] = 1
+            context['name'] = userData['name']
+            return render(request, 'index.html', context)
         else:
-            return HttpResponse('Error 404. Page Not Found!')
+            return render(request, 'index.html', {'status': 0})
 
 
 def getTokens(code):
@@ -68,3 +73,10 @@ def getSession(request):
         return response
     except:
         return None
+
+
+def leave(request):
+    response = render(request, 'index.html', {'status':0})
+    response.delete_cookie('sessiontoken')
+    return response
+
